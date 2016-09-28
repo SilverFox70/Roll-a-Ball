@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		rigidbody.AddForce (movement * speed * Time.deltaTime);
+		GetComponent<Rigidbody>().AddForce (movement * speed * Time.deltaTime);
 
 
 	}
